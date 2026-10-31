@@ -12,9 +12,9 @@ with
 
     DROP WAREHOUSE genai_ehse;
 
-ALTER WAREHOUSE genai_ehse RESUME;
+-- ALTER WAREHOUSE genai_ehse RESUME;
 
-ALTER WAREHOUSE genai_ehse SUSPEND;
+-- ALTER WAREHOUSE genai_ehse SUSPEND;
 
 ALTER WAREHOUSE genai_ehse SET WAREHOUSE_SIZE=SMALL;
 
@@ -22,7 +22,7 @@ ALTER WAREHOUSE genai_ehse SET WAREHOUSE_SIZE=SMALL;
 select * from sbowflake_first.frist_schema.lollla;
 
 CREATE OR REPLACE TABLE NEERAJ (
-    ID NUMBER,
+    ID int,
     NAME VARCHAR(100),
     AGE NUMBER
 );
