@@ -1,0 +1,46 @@
+select * from sbowflake_first.frist_schema.lollla;
+
+create or replace warehouse genai_ehse
+with 
+    WAREHOUSE_SIZE=XSMALL
+    AUTO_SUSPEND=100
+    SCALING_POLICY='ECONOMY'
+    MIN_CLUSTER_COUNT=1
+    MAX_CLUSTER_COUNT=2
+    INITIALLY_SUSPENDED=TRUE
+    COMMENT='THIS WAS CLUSTER BY QUERY';
+
+    DROP WAREHOUSE genai_ehse;
+
+ALTER WAREHOUSE genai_ehse RESUME;
+
+ALTER WAREHOUSE genai_ehse SUSPEND;
+
+ALTER WAREHOUSE genai_ehse SET WAREHOUSE_SIZE=SMALL;
+
+
+select * from sbowflake_first.frist_schema.lollla;
+
+CREATE OR REPLACE TABLE NEERAJ (
+    ID NUMBER,
+    NAME VARCHAR(100),
+    AGE NUMBER
+);
+
+
+SHOW TABLES IN SCHEMA sbowflake_first.frist_schema;
+
+
+
+
+USE DATABASE sbowflake_first;
+
+SELECT *
+FROM sbowflake_first.INFORMATION_SCHEMA.TABLE_STORAGE_METRICS
+WHERE TABLE_CATALOG = 'SBOWFLAKE_FIRST';
+
+SELECT *
+FROM TABLE(INFORMATION_SCHEMA.QUERY_HISTORY());
+
+
+
